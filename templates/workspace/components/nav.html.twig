@@ -1,0 +1,28 @@
+<nav class="px-4 py-1 h-12 border-b border-border flex justify-between items-center">
+  <div class="flex items-center gap-4 cursor-pointer">
+    <twig:ux:icon name="tabler:layout-sidebar-right-collapse" 
+      class="h-5 w-5"
+    />
+    <twig:ux:icon name="tabler:layout-grid" class="h-5 w-5"/>
+  </div>
+  <div class="p-2 flex items-center gap-2">
+    <div class="px-2 py-1 flex items-center border gap-2 border-gray-500 rounded focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500  transition-colors">
+      <twig:ux:icon name="tabler:search" class="h-4 w-4"/>
+      <input type="text" class="text-text-primary focus:outline-none"
+        placeholder="Search"
+      >
+    </div>
+    <button class="px-2 py-1 flex items-center gap-2 rounded bg-blue-700 text-neutral-0 cursor-pointer">
+      <twig:ux:icon name="tabler:plus" class="h-5 w-5"/>
+      Search
+    </button>
+  </div>
+  <div class="flex items-center gap-4 cursor-pointer">
+    <twig:ux:icon name="tabler:bell" class="h-5 w-5"/>
+    <twig:ux:icon name="tabler:help" class="h-5 w-5"/>
+    <twig:ux:icon name="tabler:settings" class="h-5 w-5"/>
+    <div class="h-9 w-9 rounded-full bg-blue-500 flex justify-center items-center text-sm text-neutral-0">
+      NR
+    </div>
+  </div>
+</nav>
