@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WorkspaceController!{% endblock %}
+
+{% block body %}
+  <div class="h-full flex flex-col">
+    {% block nav  %}
+      {% include "workspace/components/nav.html.twig" %}
+    {% endblock %}
+    
+    <div class="flex flex-1 overflow-hidden">
+      {% block sidebar %}
+        {% include "workspace/components/sidebar.html.twig" %}
+      {% endblock %}  
+      <main class="p-4 flex-1 overflow-auto">
+        {% block main %}{% endblock %}
+      </main>
+    </div>
+</div>
+{% endblock %}
