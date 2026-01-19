@@ -11,6 +11,7 @@
     <div class="flex flex-1 overflow-hidden">
       {% block sidebar %}
         {% include "workspace/components/sidebar.html.twig" %}
+        {% include "workspace/components/modals/project.html.twig" %}
       {% endblock %}  
       <main class="p-4 flex-1 overflow-auto">
         {% block main %}{% endblock %}
