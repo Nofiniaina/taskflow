@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+  <div class="flex justify-center items-center flex-col">
+    <!-- Header -->
+    <div class="px-8 pt-8 pb-6 border-b border-neutral-300">
+      <h1 class="text-2xl font-semibold text-neutral-900 text-center">
+        Create your account
+      </h1>
+      <p class="mt-2 text-sm text-neutral-600 text-center">
+        Get started with your new account
+      </p>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="px-8 py-6 w- flex flex-col gap-4">
+      {{ form_start(registrationForm)}}
+        <!-- Lastname field -->
+        <div class="">
+            <label for="" class="font-medium text-neutral-800">
+              Lastname
+            </label>
+            {{ form_row(registrationForm.lastname , { 
+              'attr': { 
+                'class': ' 
+                  text-sm placeholder:text-neutral-500 
+                  focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent 
+                  hover:border-neutral-600 transition-colors',
+                'placeholder': 'Your lastname'
+              }
+            })}}
+        </div>
+        <!-- Firstname field -->
+        <div class="">
+            <label for="" class="font-medium text-neutral-800">
+              Firstname
+            </label>
+            {{ form_row(registrationForm.firstname , { 
+              'attr': { 
+                'class': '
+                  text-sm placeholder:text-neutral-500 
+                  focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent 
+                  hover:border-neutral-600 transition-colors',
+                'placeholder': 'Your firstname'
+              }
+            })}}
+        </div>
+        <!-- Email field -->
+        <div class="">
+            <label for="">Email</label>
+            {{ form_row(registrationForm.email)}}
+        </div>
+        <!-- Password field -->
+        <div class="">
+            <label for="">Password</label>
+            {{ form_row(registrationForm.password)}}
+        </div>
+
+        <!-- Agree Terms field -->
+        <div>
+          <label for="">Agree terms and condition</label>
+          {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      {{ form_end(registrationForm)}}
+    </div>
+  </div>
+{% endblock %}
