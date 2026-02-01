@@ -91,6 +91,7 @@
     ],
     "app:ensure-quality": [
       "./vendor/bin/phpstan analyse --memory-limit=-1",
+      "./vendor/bin/rector --dry-run",
       "bin/console lint:yaml config --parse-tags",
       "bin/console lint:twig templates",
       "bin/console lint:container"
@@ -110,6 +111,7 @@
     "phpstan/phpstan-doctrine": "^2.0",
     "phpstan/phpstan-symfony": "^2.0",
     "phpunit/phpunit": "^12.5",
+    "rector/rector": "^2.3",
     "symfony/browser-kit": "6.4.*",
     "symfony/css-selector": "6.4.*",
     "symfony/debug-bundle": "6.4.*",
