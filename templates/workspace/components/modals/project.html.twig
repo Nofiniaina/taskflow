@@ -3,23 +3,23 @@
   data-controller="modal"
 >
   <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"
+  <div class="absolute inset-0 bg-background/80 backdrop-blur-sm"
     data-action="click->modal#close"  
   ></div>
   
   <!-- Modal -->
-  <div class="relative w-full max-w-lg rounded-lg bg-neutral-0 shadow-xl">
+  <div class="relative w-full max-w-lg rounded-lg bg-card shadow-xl">
     
     <!-- Header -->
-    <div class="flex items-center justify-between px-6 py-5 border-b border-neutral-300">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-border">
       <div>
-        <h2 class="text-lg font-semibold text-neutral-900">
+        <h2 class="text-lg font-semibold text-card-foreground">
           Create new project space
         </h2>
       </div>
       <button
         type="button"
-        class="p-2 -mr-2 rounded-md hover:bg-neutral-200 text-neutral-600 hover:text-neutral-900 transition-colors"
+        class="p-2 -mr-2 rounded-md hover:bg-accent hover:text-accent-foreground text-muted-foreground transition-colors"
         aria-label="Close modal"
         data-action="click->modal#close"
       >
@@ -32,36 +32,36 @@
       
       <!-- Name Field -->
       <div class="space-y-2">
-        <label for="project-name" class="block text-sm font-medium text-neutral-800">
-          Project name <span class="text-error">*</span>
+        <label for="project-name" class="block text-sm font-medium text-foreground">
+          Project name <span class="text-destructive">*</span>
         </label>
         <input
           id="project-name"
           type="text"
           placeholder="e.g. Marketing Website Redesign"
           required
-          class="w-full rounded-md border border-neutral-400 bg-neutral-0 px-3.5 py-2.5 text-sm
-                 text-neutral-900 placeholder:text-neutral-600
-                 focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent
-                 hover:border-neutral-600 transition-colors"
+          class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm
+                 text-foreground placeholder:text-muted-foreground
+                 focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent
+                 hover:border-ring transition-colors"
         />
-        <p class="text-xs text-neutral-600">
+        <p class="text-xs text-muted-foreground">
           Choose a descriptive name for your project
         </p>
       </div>
       
       <!-- Access Field -->
       <div class="space-y-2">
-        <label for="project-access" class="block text-sm font-medium text-neutral-800">
-          Access level <span class="text-error">*</span>
+        <label for="project-access" class="block text-sm font-medium text-foreground">
+          Access level <span class="text-destructive">*</span>
         </label>
         <select
           id="project-access"
           required
-          class="w-full rounded-md border border-neutral-400 bg-neutral-0 px-3.5 py-2.5 text-sm
-                 text-neutral-900
-                 focus:outline-none focus:ring-2 focus:ring-blue-primary focus:border-transparent
-                 hover:border-neutral-600 transition-colors cursor-pointer"
+          class="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm
+                 text-foreground
+                 focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent
+                 hover:border-ring transition-colors cursor-pointer"
         >
           <option value="private">
             Private - Only invited members
@@ -73,7 +73,7 @@
             Public - Anyone with the link
           </option>
         </select>
-        <p class="text-xs text-neutral-600">
+        <p class="text-xs text-muted-foreground">
           Control who can view and contribute to this project
         </p>
       </div>
@@ -81,20 +81,20 @@
     </div>
     
     <!-- Footer -->
-    <div class="flex justify-end gap-3 px-6 py-4 border-t border-neutral-300 bg-neutral-100 rounded-b-lg">
+    <div class="flex justify-end gap-3 px-6 py-4 border-t border-border bg-muted rounded-b-lg">
       <button
         type="button"
-        class="px-4 py-2.5 text-sm font-medium text-neutral-700 rounded-md
-               hover:bg-neutral-200 active:bg-neutral-300 
-               transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2"
+        class="px-4 py-2.5 text-sm font-medium text-foreground rounded-md
+               hover:bg-accent hover:text-accent-foreground active:bg-accent/80
+               transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
       >
         Cancel
       </button>
       <button
         type="submit"
-        class="px-5 py-2.5 text-sm font-medium text-white rounded-md
-               bg-blue-primary hover:bg-blue-hover active:bg-blue-pressed 
-               transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-primary focus:ring-offset-2
+        class="px-5 py-2.5 text-sm font-medium text-primary-foreground rounded-md
+               bg-primary hover:bg-primary/90 active:bg-primary/80
+               transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
                disabled:opacity-50 disabled:cursor-not-allowed"
       >
         Create project
