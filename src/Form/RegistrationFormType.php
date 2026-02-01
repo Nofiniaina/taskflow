@@ -20,13 +20,13 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('lastname', TextType::class, [
-                'label' =>  false,
+                'label' => false,
             ])
             ->add('firstname', TextType::class, [
-                'label' =>  false,
+                'label' => false,
             ])
             ->add('email', TextType::class, [
-                'label' =>  false,
+                'label' => false,
             ])
             ->add('password', RepeatedType::class, [
                 // instead of being set onto the object directly,
@@ -34,7 +34,9 @@ class RegistrationFormType extends AbstractType
                 'label' => false,
                 'type' => PasswordType::class,
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => [
+                    'autocomplete' => 'new-password',
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
@@ -46,11 +48,15 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
-                'first_options'  => ['label' => false],
-                'second_options' => ['label' => false],
+                'first_options' => [
+                    'label' => false,
+                ],
+                'second_options' => [
+                    'label' => false,
+                ],
             ])
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => false,   
+                'label' => false,
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([

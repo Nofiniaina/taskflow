@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class WorkspaceController extends AbstractController
 {
-  #[Route('/workspace', name: 'app_workspace')]
-  public function index(): Response
-  {
-    return $this->render('workspace/workspace.html.twig', [
-      'controller_name' => 'WorkspaceController',
-    ]);
-  }
+    #[Route('/workspace', name: 'app_workspace')]
+    public function index(): Response
+    {
+        return $this->render('workspace/workspace.html.twig', [
+            'controller_name' => 'WorkspaceController',
+        ]);
+    }
 }
